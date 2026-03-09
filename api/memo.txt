@@ -1,0 +1,3 @@
+./gradlew bootRun
+
+docker exec -it jvs-payout-db psql -U sample -d payout

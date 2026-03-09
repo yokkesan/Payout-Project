@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/payout
+    username: postgres
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+mail:
+  driver: ${MAIL_DRIVER:log}

@@ -1,0 +1,21 @@
+.page {
+    padding: 80px 20px 120px;
+
+    &__container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+.page__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4rem 1rem;
+}
+
+}

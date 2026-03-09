@@ -1,0 +1,16 @@
+# node
+app/node_modules
+app/dist
+
+# vite
+app/.vite
+
+# spring
+api/build
+api/.gradle
+
+# OS
+.DS_Store
+
+# env
+.env

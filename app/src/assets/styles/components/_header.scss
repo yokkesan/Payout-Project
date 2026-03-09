@@ -1,0 +1,149 @@
+.header {
+    border-top: 6px solid #2e2b59; // 上の細い濃紺ライン
+
+    &__top {
+        background: #f3f3f3;
+        padding: 18px 0;
+    }
+
+    &__bottom {
+        background: #1f97d4; // 青帯
+        padding: 12px 0;
+    }
+
+    &__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        .logo-text {
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        small {
+            display: block;
+            font-weight: 600;
+            font-size: 12px;
+            color: #555;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+
+    &__contact {
+        background: #ff1f3d;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 999px;
+        font-weight: 700;
+    }
+
+    &__services {
+        display: flex;
+        gap: 24px;
+
+        a {
+            color: #fff;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    }
+
+    &__hamburger {
+        display: none;
+        border: none;
+        background: none;
+    }
+
+    &__hamburger span {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background: #333;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header__inner {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .header__hamburger {
+        display: block;
+    }
+
+    .header__nav {
+        display: none;
+        width: 100%;
+    }
+
+    .header__bottom {
+        display: none;
+        width: 100%;
+    }
+
+    /* メニュー開いた時 */
+
+    .header__nav.is-open {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        order: 3;
+        margin-top: 20px;
+        align-items: flex-start;
+    }
+
+    .header__bottom.is-open {
+        display: block;
+        width: 100%;
+        order: 4;
+        margin-top: 20px;
+    }
+
+    .header__services {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+        .header__hamburger.is-open span:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 4px);
+        }
+    
+        .header__hamburger.is-open span:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .header__hamburger.is-open span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px);
+        }
+
+}
