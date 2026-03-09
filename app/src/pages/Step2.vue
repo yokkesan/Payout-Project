@@ -67,12 +67,15 @@ const verify = async () => {
 
     isSubmitting.value = true
 
+    const email = localStorage.getItem('email')
+
     const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/verify-code`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: new URLSearchParams({
+            email: email ?? '',
             code: code.value
         })
     })

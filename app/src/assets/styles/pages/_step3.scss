@@ -1,0 +1,111 @@
+.step3 {
+
+    &__title {
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+/* ラベル */
+
+.label {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.required {
+    display: inline-block;
+    background: #e60023;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+/* チェックボックス */
+
+.wpcf7-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    input {
+        width: 18px;
+        height: 18px;
+    }
+
+    &-label {
+        font-size: 15px;
+    }
+}
+
+/* 説明テキスト */
+
+.information-text {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 20px;
+}
+
+.information-title {
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.information-list {
+    margin-top: 20px;
+    padding-left: 20px;
+
+    li {
+        margin-bottom: 12px;
+    }
+}
+
+/* ボタン */
+
+.step3__buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.step3__submit {
+    background: #2a9fd6;
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+.step3__back {
+    background: #eee;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}

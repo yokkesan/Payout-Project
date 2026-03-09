@@ -42,8 +42,7 @@ const email = ref('')
 const isSubmitting = ref(false)
 
 const goNext = async () => {
-    console.log('push step2')
-router.push('/step2')
+
     if (!email.value) return
 
     isSubmitting.value = true
@@ -69,6 +68,8 @@ router.push('/step2')
         isSubmitting.value = false
         return
     }
+
+    localStorage.setItem('email', email.value)
 
     router.push('/step2')
 }
